@@ -9,4 +9,5 @@ RUN yum install -y git
 RUN yum install -y subversion-devel
 RUN git clone https://github.com/xiaotianwu/mesos_docker_executor
 RUN chmod +x /mesos_docker_executor/executor.py
-ENTRYPOINT ["/mesos_docker_executor/executor.py"]
+RUN yum install -y net-tools
+ENTRYPOINT ["export LIBPROCESS_IP=\`ifconfig | grep 255.255.255.128 |  cut -f 2 -d \":\" | cut -f 10 -d \" \"\`&&/mesos_docker_executor/executor.py"]

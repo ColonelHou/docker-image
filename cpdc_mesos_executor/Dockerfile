@@ -7,6 +7,6 @@ RUN python ez_setup.py --insecure
 RUN easy_install mesos-0.21.0-py2.7-linux-x86_64.egg
 RUN yum install -y git
 RUN yum install -y subversion-devel
-RUN git clone https://github.com/xiaotianwu/mesos_docker_executor_0_2
-RUN chmod +x /mesos_docker_executor_0_2/executor.py
-ENTRYPOINT ["/mesos_docker_executor_0_2/executor.py"]
+RUN git clone https://github.com/xiaotianwu/mesos_docker_executor_0_2_1
+RUN chmod +x /mesos_docker_executor_0_2_1/executor.py
+ENTRYPOINT ["/mesos_docker_executor_0_2_1/executor.py"]

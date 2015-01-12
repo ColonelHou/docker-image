@@ -1,4 +1,4 @@
-FROM cpdc/mesos_executor_0_2_1
+FROM cpdc/mesos_executor_0_2_2
 MAINTAINER Xiaotian Wu <xiaotian.wu@chinacache.com>
 RUN git clone https://github.com/xiaotianwu/walle_monitor_0_2
 RUN git clone https://github.com/xiaotianwu/kafka-python
